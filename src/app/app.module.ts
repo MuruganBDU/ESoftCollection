@@ -10,12 +10,18 @@ import { RoutingModule } from './routing/routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ApiService } from './service/api.service';
 import { LoginService } from './service/login.service';
+import { TopnavComponent } from './topnav/topnav.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    TopnavComponent,
+    SidenavComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
