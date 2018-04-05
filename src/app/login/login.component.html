@@ -1,0 +1,47 @@
+<div fxLayout="row" ngClass.gt-sm="margin-top5">
+  <div fxFlex="35%" fxHide.xs></div>
+  <div fxFlex>
+    <h2 align="center" class="color-primary">Welcome!</h2>
+    <mat-card>
+      <mat-tab-group>
+        <mat-tab label="Login">
+          <mat-form-field fxLayout="column">
+            <input matInput placeholder="Username" type="text" [(ngModel)]="userName" required>
+            <!-- <mat-icon matPrefix>Home</mat-icon> -->
+          </mat-form-field>
+          <mat-form-field fxLayout="column">
+            <input matInput placeholder="Enter your password" type="password" [(ngModel)]="password" required>
+            <!-- <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon> -->
+          </mat-form-field>
+          <mat-card-actions class="no-margin">
+            <a mat-button color="primary">Forgot password?</a>
+            <button mat-raised-button color="primary" class="align-right" (click)=loginUser()>LogIn</button>
+          </mat-card-actions>
+        </mat-tab>
+        <!-- Registration section -->
+        <mat-tab label="Register">
+          <mat-form-field fxLayout="column">
+            <input matInput placeholder="Email" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">Invalid Email</mat-error>
+          </mat-form-field>
+          <mat-form-field fxLayout="column">
+            <input matInput placeholder="UserName" type="text" required>
+          </mat-form-field>
+          <mat-form-field fxLayout="column">
+            <input matInput placeholder="Password" [type]="Registerhide ? 'password' : 'text'" required>
+            <mat-icon matSuffix (click)="Registerhide = !Registerhide">{{Registerhide ? 'visibility' : 'visibility_off'}}</mat-icon>
+          </mat-form-field>
+          <mat-form-field fxLayout="column">
+            <input matInput placeholder="ReEnter your password" type="Password" required>
+          </mat-form-field>
+          <mat-card-actions class="no-margin" fxLayoutAlign="end">
+            <button mat-raised-button color="primary">SignUp</button>
+          </mat-card-actions>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card>
+  </div>
+  <div fxFlex="35%" fxHide.xs></div>
+  <!-- <div fxFlex="22%" fxFlex.md="100px" fxHide.xs fxOffset="20%">fsefsfsfse</div>
+  <div fxFlex="22%" fxFlex.md="100px" fxHide.xs fxOffset="20%">fsefsfsfse</div> -->
+</div>

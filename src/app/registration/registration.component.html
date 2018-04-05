@@ -1,0 +1,19 @@
+<mat-tab label="Register">
+  <mat-form-field fxLayout="column">
+    <input matInput placeholder="Email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">Invalid Email</mat-error>
+  </mat-form-field>
+  <mat-form-field fxLayout="column">
+    <input matInput placeholder="UserName" type="text" required>
+  </mat-form-field>
+  <mat-form-field fxLayout="column">
+    <input matInput placeholder="Password" [type]="Registerhide ? 'password' : 'text'" required>
+    <mat-icon matSuffix (click)="Registerhide = !Registerhide">{{Registerhide ? 'visibility' : 'visibility_off'}}</mat-icon>
+  </mat-form-field>
+  <mat-form-field fxLayout="column">
+    <input matInput placeholder="ReEnter your password" type="Password" required>
+  </mat-form-field>
+  <mat-card-actions class="no-margin" fxLayoutAlign="end">
+    <button mat-raised-button color="primary">SignUp</button>
+  </mat-card-actions>
+</mat-tab>
