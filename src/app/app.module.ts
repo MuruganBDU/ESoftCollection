@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { RoutingModule } from './routing/routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ApiService } from './service/api.service';
-import { LoginService } from './service/login.service';
+import { AuthService } from './service/login.service';
 import { TopnavComponent } from './layout/topnav/topnav.component';
 import { SidenavComponent } from './layout/sidenav/sidenav.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -37,7 +37,7 @@ import { AuthGuard } from './auth.guard';
   ],
   providers: [
     ApiService,
-    LoginService,AuthGuard
+    AuthService,AuthGuard
   ],
   bootstrap: [AppComponent]
 })

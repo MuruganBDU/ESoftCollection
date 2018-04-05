@@ -10,10 +10,6 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
-    path: '',
-    component: LoginComponent
-  },
-  {
     path: 'Dashboard',
     canActivate:[AuthGuard],
     component: DashboardComponent

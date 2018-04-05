@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 @Injectable()
-export class LoginService {
+export class AuthService {
   public url = 'http://localhost/ESoft/api/Account/CheckUser';
   private isUserLoggedIn;
   private username;
@@ -22,12 +22,18 @@ export class LoginService {
   }
   setUserLoggedIn() {
     this.isUserLoggedIn = true;
+    localStorage.setItem("authenticated",this.isUserLoggedIn);
   }
   getUserLoggedIn() {
+    if(localStorage.getItem("authenticated")){
+      this.isUserLoggedIn=true;
+    }
     return this.isUserLoggedIn;
   }
   removeUserLoggedIn() {
     debugger;
     this.isUserLoggedIn = false;
+    localStorage.removeItem("authenticated");
+    return false;
   }
 }

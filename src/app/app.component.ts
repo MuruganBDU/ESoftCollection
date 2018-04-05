@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { LoginService } from '././service/login.service';
+import { AuthService } from '././service/login.service';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-root',
@@ -7,11 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private router: Router, private loginservice: LoginService) {
+  constructor(private router: Router, private authService: AuthService) {
 
   }
   public logout(): void {
-    this.loginservice.removeUserLoggedIn();
+    this.authService.removeUserLoggedIn();
     this.router.navigate(['/']);
   }
 }
