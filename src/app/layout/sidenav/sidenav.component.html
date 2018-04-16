@@ -1,3 +1,24 @@
-<p>
-  sidenav works!
-</p>
+<ng-container>
+  <app-topnav class="example-header"></app-topnav>
+  <mat-sidenav-container class="example-container" [style.top.px]="router.url=='/login'?'0':'60'">
+    <mat-sidenav #sidenav mode="side" opened="true" class="example-sidenav" [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
+      [fixedBottomGap]="options.value.bottom" *ngIf="router.url!='/login'">
+     <nav>
+       <div class="nav-items">
+         <a class="nav-link" routerLink='/Customer'>
+          <mat-icon class="nav-link-icon">person</mat-icon>Customer</a>
+        </div>
+      <div class="nav-items">
+        <a class="nav-link"  routerLink='/Dashboard'>
+          <mat-icon class="nav-link-icon">dashboard</mat-icon>Dashboard</a>
+        </div>
+     </nav>
+      
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="view">
+          <router-outlet></router-outlet>
+      </div>
+         </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

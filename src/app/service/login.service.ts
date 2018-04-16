@@ -31,7 +31,6 @@ export class AuthService {
     return this.isUserLoggedIn;
   }
   removeUserLoggedIn() {
-    debugger;
     this.isUserLoggedIn = false;
     localStorage.removeItem("authenticated");
     return false;

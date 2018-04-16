@@ -60,7 +60,6 @@ export class LoginComponent implements OnInit {
   loginUser() {
     if (this.userName == 'admin' && this.password == '123') {
       this.authService.setUserLoggedIn();
-      debugger;
       this.router.navigate(['Dashboard']);
     }
   }

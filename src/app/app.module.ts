@@ -15,6 +15,7 @@ import { SidenavComponent } from './layout/sidenav/sidenav.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { AuthGuard } from './auth.guard';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AuthGuard } from './auth.guard';
     TopnavComponent,
     SidenavComponent,
     FooterComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,

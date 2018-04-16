@@ -12,7 +12,6 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('dashbord');
+    console.log('dashbord'); 
   }
-  
 }
